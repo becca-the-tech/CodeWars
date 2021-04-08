@@ -24,3 +24,36 @@ function quarterOfYear(month) {
         return 4;
     }
 }
+
+function filterMech(num) {
+    if (num % 3 == 0 && num % 5 == 0) {
+        return "FizzBuzz";
+    } else if (num % 3 == 0) {
+        return "Fizz";
+    } else if (num % 5 == 0) {
+        return "Buzz";
+    } else {
+        return num;
+    }
+}
+
+let unhealthySnacks = ["gummies", "candy", "soda", "chocolate", "latte", "chips"];
+let snacks = ["peanut butter bars", "gummies", "chips", "pretzels", "latte", "coffee", "toast"];
+const snackFilter = snacks => snacks.filter(snack => !unhealthySnacks.includes(snack));
+console.log(snackFilter(snacks));
+
+
+/*Define the filter array, then define the unfiltered array
+Then use unfiltered.filter(singularItem => !filterArray.includes(singularItem));
+So unfiltered is the initial array that uses the filter method on it, then it uses an anonymous callback function
+with a parameter of singularItem that it creates from each individual item in the variable unfiltered.
+The function checks if singularItem is found within the filterArray, and it only adds the singularItem that is
+NOT found in filteredArray to what it returns
+
+It says, does this item exist in filterArray? only add it to the new array if it does not*/
+
+
+let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+let birds = ["duck", "penguin", "African", "Sand-Hilled Crane", "Toulouse", "Ahinga"];
+const gooseFilter = birds => birds.filter(bird => !geese.includes(bird));
+console.log(gooseFilter(birds));
