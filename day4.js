@@ -1,6 +1,5 @@
 /*Create a function that tells all animals the frog has a 'wide' mouthSize, unless it encounters an alligator (case insensitive)
 in which it should say its mouth size is small. */
-
 function mouthSize(animal) {
     // code here
     if (animal.toLowerCase() == 'alligator') {
