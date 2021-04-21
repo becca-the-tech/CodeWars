@@ -27,12 +27,28 @@ function greet(name) {
 /*Write a function to convert a name into initials.
 This kata strictly takes two words with one space in between them.
 // The output should be two capital letters with a dot separating them. */
-// function initialize(word1, word2) {
-//     word1 = word1.split();
-//     word1 = word1[0].toUpperCase();
+function initialize(word1, word2) {
+    word1 = word1.split('');
+    word1 = word1[0].toUpperCase();
+    console.log(word1);
 
-//     word2 = word2.split();
-//     word2 = word2[0].toUpperCase();
-//     word1.join(". ", word2);
-//     return word1;
-// }
+    word2 = word2.split('');
+    word2 = word2[0].toUpperCase();
+
+    let output = word1 + "." + word2;
+    return output;
+}
+
+//console.log(initialize("Alex", "Vilar"));
+function abbreviate(name) {
+    name = name.split(" ");
+    return name[0][0].toUpperCase() + "." + name[1][0].toUpperCase();
+}
+
+let initials = name => {
+    name = name.split(" ");
+    let fLetter = name[0][0];
+    let lLetter = name[1][0];
+
+    return fLetter + "." + lLetter;
+};
