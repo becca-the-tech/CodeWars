@@ -26,4 +26,4 @@ function removeExclatamationMarks3(s) {
     return arr.filter(letter => letter !== "!").join("");
 }
 
-console.log(removeExclatamationMarks3("T!!hanks !in advancE!!"));
+// console.log(removeExclatamationMarks3("T!!hanks !in advancE!!"));
