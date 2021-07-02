@@ -32,3 +32,5 @@ function checkAlive2(health) {
 function checkAlive3(health) {
     return health > 0;
 }
+
+
